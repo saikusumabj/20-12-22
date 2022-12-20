@@ -1,0 +1,145 @@
+91. Write a Python program to count the number of arguments in a given function?
+Sample Input:
+()
+(1)
+(1, 2)
+(1, 2, 3)
+(1, 2, 3, 4)
+[1, 2, 3, 4]
+A)def num_of_args(*args):
+       return(len(args))        
+print(num_of_args()) 
+print(num_of_args(1,2))
+print(num_of_args(1,2,3)) 
+print(num_of_args(1,2,3,4))       
+98. Write a Python program to check whether a sequence of numbers has an increasing trend or not?
+Sample Input:
+[1,2,3,4]
+[1,2,5,3,4]
+[-1,-2,-3,-4]
+[-4,-3,-2,-1]
+[1,2,3,4,0]
+A)def increasedorder(nums):
+      if(sorted(nums)==nums):
+        return True
+      else:
+        return False  
+print(increasedorder([1,2,3,4]))
+print(increasedorder([1,2,5,3,4]))
+print(increasedorder([-1,-2,-3,-4]))
+print(increasedorder([-1,-2,-3,-4]))
+print(increasedorder([-4,-3,-2,-1]))
+print(increasedorder([1,2,3,4,0]))
+
+41. Write a Python program to compute and print sum of two given integers (more than or equal to zero). If given integers or the sum have more than 80 digits, print "overflow"?
+Input first integer:
+25
+Input second integer:
+22
+Sum of the two integers: 47
+A)x=25
+y=22
+print(x+y)
+if (x+y)>80:
+    print("Overflow")
+
+73. Write a Python program to remove the duplicate elements of a given array of numbers such that each element appear only once and return the new length of the given array?
+Sample Input:
+[0,0,1,1,2,2,3,3,4,4,4]
+[1, 2, 2, 3, 4, 4]
+Sample Output:
+5
+4
+A)a=[0,0,1,1,2,2,3,3,4,4,4] 
+a=set(a)
+print(len(list(a)))
+b=[1,2,2,3,4,4]
+b=set(b)
+print(len(list(b)))   
+
+18. Write a Python program to find the median among three given numbers.
+A)
+x = input("Input the first number")
+y = input("Input the second number")
+z = input("Input the third number")
+print("Median of the above three numbers -")
+
+if y < x and x < z:
+    print(x)
+elif z < x and x < y:
+    print(x)
+    
+elif z < y and y < x:
+    print(y)
+elif x < y and y < z:
+    print(y)
+    
+elif y < z and z < x:
+    print(z)    
+elif x < z and z < y:
+    print(z)
+
+72. Write a Python program to check whether a given integer is a palindrome or not?
+Note: An integer is a palindrome when it reads the same backward as forward. Negative numbers are not palindromic.
+Sample Input:
+(100)
+(252)
+(-838)
+Sample Output:
+False
+True
+False
+A)def is_palindrome(n):
+    return str(n)==str(n)[::-1]
+print(is_palindrome(100))
+print(is_palindrome(252))
+print(is_palindrome(-838))    
+
+
+
+83. Write a Python program to test whether a given number is symmetrical or not?
+A number is symmetrical when it is equal of its reverse.
+Sample Input:
+(121)
+(0)
+(122)
+(990099)
+Sample Output:
+True
+True
+False
+True
+A)def is_symmetric(n):
+    return str(n)==str(n)[::-1]
+print(is_symmetric(121))
+print(is_symmetric(0))
+print(is_symmetric(122))    
+print(is_symmetric(990099))  
+
+2. Write a Python program to create all possible strings by using 'a', 'e', 'i', 'o', 'u'. Use the characters exactly once.
+import random
+x=['a','e','i','o','u']
+random.shuffle(x)
+print(''.join(x))
+
+81. Write a Python program to randomly generate a list with 10 even numbers between 1 and 100 inclusive. 
+Note: Use random.sample() to generate a list of random values.
+Sample Input:
+(1,100)
+Sample Output:
+[4, 22, 8, 20, 24, 12, 30, 98, 28, 48]
+A)
+import random
+print(random.sample([i for i in range(1,100) if i%2==0], 10))
+
+
+115. Write a Python program to generate and prints a list of numbers from 1 to 10.
+range(1,10)
+Sample Output:
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+nums = range(1,10)
+print(list(nums))
+print(list(map(str, nums)))
+
